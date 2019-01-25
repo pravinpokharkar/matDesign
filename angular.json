@@ -23,8 +23,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
-            ],
+              "src/styles.css",
+              "/media/pravin/78F8F95BF8F91858/angular project1/caseStudyNiket/casestudy/node_modules/quill/dist/quill.core.css",
+              "/media/pravin/78F8F95BF8F91858/angular project1/caseStudyNiket/casestudy/node_modules/quill/dist/quill.bubble.css",
+              "/media/pravin/78F8F95BF8F91858/angular project1/caseStudyNiket/casestudy/node_modules/quill/dist/quill.snow.css" ,       "/media/pravin/78F8F95BF8F91858/angular project1/caseStudyNiket/casestudy/src/assets/metropolis/Metropolis-Black.otf"
+                     ],
             "scripts": []
           },
           "configurations": {
