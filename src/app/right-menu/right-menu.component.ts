@@ -10,6 +10,9 @@ export class RightMenuComponent implements OnInit {
 
   constructor() { }
 
+
+  expandedHeight: string;
+  collapsedHeight: string;
   // problems=[
   //   {id:1, index:'1.', name:'What do you think about the launching of a new brand of chocolate bars mentioned in the case?'},
   //   {id:2, index:'2.',name:'Based on the information above, what will be your overall strategy to ensure an effective product launch? '},
