@@ -2,30 +2,23 @@
     <div class="title">Questions</div>
                   
   <!-- <div *ngFor="let problem of problems"> -->
-
-  <div class="question-section" >
-     <div id="question0" class="question-row">
-         <div class="question">
+<mat-accordion>
+   <mat-expansion-panel hideToggle="true">
+         <mat-expansion-panel-header >
             <span>1.</span>
-               <p> What do you think about the launching of a new brand of chocolate bars mentioned in the case?'</p>
+               <p> 'What do you think about the launching of a new brand of chocolate bars mentioned in the case?'</p>
 
                    <div class="edit-btn">
                      <span> edit</span>
                   </div>
-         </div>
-
-  
-    
-
-            
+         </mat-expansion-panel-header>
       <div class="text-editor">
-
        <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"> 
           <div quill-editor-toolbar class="ql-toolbar ql-snow" >
                <span class="ql-formats">
-                <button class="ql-bold" [title]="'Bold'"></button>
-                <button class="ql-italic"></button>
-                <button class="ql-underline"></button>
+               <button class="ql-bold" [title]="'Bold'"></button>
+               <button class="ql-italic"></button>
+               <button class="ql-underline"></button>
                <button class="ql-indent" value="-1"></button>
                <button class="ql-indent" value="+1"></button>
                <button class="ql-align" value=""> </button>
@@ -35,18 +28,13 @@
                <button class="ql-list" value="bullet"></button>
               </span>
           </div>
-
-      </quill-editor> 
-           
+       </quill-editor> 
            <div id="toolbar-0">
                 <button mat-button>Update</button>
            </div>
-
        </div>
-
-
-      </div>
-   </div>
+   </mat-expansion-panel>
+</mat-accordion>
 </div>
 
 

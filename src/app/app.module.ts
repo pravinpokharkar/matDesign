@@ -13,6 +13,7 @@ import { TimerService } from './timer.service';
 import { TestComponent } from './test/test.component';
 import { QuillModule } from 'ngx-quill'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatExpansionModule} from '@angular/material/expansion'; 
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CountdownModule,
     QuillModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule,
+    
   
   ],
   providers: [TimerService],

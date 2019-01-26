@@ -18,6 +18,8 @@ export class RightMenuComponent implements OnInit {
   //   {id:5, index:'5.', name:'Are there any difficulties/challenges/risks that might arise? If yes, what are they and how you intend to resolve those?'},
   // ]
 
+ 
+
   ngOnInit() {
   }
 
