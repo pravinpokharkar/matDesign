@@ -16,7 +16,7 @@
                   </div>
          </mat-expansion-panel-header>
       <div class="text-editor" >
-       <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"> 
+       <quill-editor  [(ngModel)]="length" (onContentChanged)="textChanged($event)"   class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"> 
           <div quill-editor-toolbar class="ql-toolbar ql-snow" >
                <span class="ql-formats">
                <button class="ql-bold" [title]="'Bold'"></button>
@@ -31,9 +31,10 @@
                <button class="ql-list" value="bullet"></button>
               </span>
           </div>
+         
        </quill-editor> 
            <div id="toolbar-0">
-                <button mat-button>Update</button>
+                <button mat-button>{{bttn}}</button>
            </div>
        </div>
    </mat-expansion-panel>
@@ -41,7 +42,7 @@
 <!-- 2nd Question -->
 
 <mat-expansion-panel hideToggle="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false" >
-      <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'70px'" >
+      <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'" >
          <span>2.</span>
             <p> 'Based on the information above, what will be your overall strategy to ensure an effective product launch?'</p>
 
@@ -143,7 +144,7 @@
 <!-- 5th question down -->
 
 <mat-expansion-panel hideToggle="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false" >
-      <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'70px'" >
+      <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'" >
          <span>5.</span>
             <p> 'Are there any difficulties/challenges/risks that might arise? If yes, what are they and how you intend to resolve those?'</p>
 
@@ -178,10 +179,11 @@
 
 </mat-accordion>
 <div class="submit-btn ">
-      <button mat-raised-button color="primary">Submit Assessment</button>
+      <button mat-button >Submit Assessment</button>
 
 </div>
 </div>
+
 
 
 

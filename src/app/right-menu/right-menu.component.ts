@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, ElementRef, ViewChild, Output } from '@angular/core';
 import { hasLifecycleHook } from '@angular/compiler/src/lifecycle_reflector';
+import { QuillEditorComponent, QuillModule } from 'ngx-quill';
 
 @Component({
   selector: 'app-right-menu',
@@ -8,26 +9,28 @@ import { hasLifecycleHook } from '@angular/compiler/src/lifecycle_reflector';
 })
 export class RightMenuComponent implements OnInit {
 
+  stat: any
+  bttn: string= 'save';
+ @ViewChild('qul')
+  qul: ElementRef
   constructor() { }
 
 
-  expandedHeight: string;
-  collapsedHeight: string;
-  // problems=[
-  //   {id:1, index:'1.', name:'What do you think about the launching of a new brand of chocolate bars mentioned in the case?'},
-  //   {id:2, index:'2.',name:'Based on the information above, what will be your overall strategy to ensure an effective product launch? '},
-  //   {id:3, index:'3.', name:'Outline an implementation plan of the major project steps you envisage'},
-  //   {id:4, index:'4.', name:'Please provide an indication of the key tasks, departments and stakeholders that would be involved at each step. How will you ensure that everyone is on the same page and expectations of each are adequately met?'},
-  //   {id:5, index:'5.', name:'Are there any difficulties/challenges/risks that might arise? If yes, what are they and how you intend to resolve those?'},
-  // ]
+@Output() 
+onContentChanged: EventEmitter<any> = new EventEmitter()
 
- 
-
-  ngOnInit() {
+textChanged($event){
+  // console.log($event.html)
+  this.stat= $event.html
+  if(this.stat!==null)
+  this.bttn='Update';
+  else 
+  this.bttn='save'
+console.log(this.bttn)
   }
 
 
-
- 
+  ngOnInit() {
+  }
   
 }

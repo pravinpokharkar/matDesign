@@ -1,0 +1,25 @@
+.left-menu{
+    width: 66.6666%
+}
+
+.left-menu p{
+    padding: 14px 24px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 hsla(0,0%,81%,.5);
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    margin: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    overflow-wrap: normal;
+}
+
+.left-menu img{
+width: 20px;
+height: 20px;
+margin-left: 700px;
+cursor: pointer;
+}

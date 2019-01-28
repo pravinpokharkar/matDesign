@@ -8,6 +8,7 @@ box-shadow: 3px 6px 9px 4px #9b9b9b;
 position: relative;
 float: right;
 width: 33.3333%;
+max-height: 300px;
 }
 
 .right-menu .title{
@@ -18,7 +19,7 @@ text-transform: uppercase;
 font-weight: 600;
 font-size: 18px;
 margin-bottom: 20px;
-
+/* overflow: scroll; */
 }
 
 mat-expansion-panel{
@@ -27,6 +28,10 @@ border-bottom: 1px solid #c8c8c8;
 width: 100%;
 }
 
+mat-accordion{
+    overflow: scroll;
+    
+}
 
 
 mat-expansion-panel-header{
@@ -123,11 +128,11 @@ cursor: pointer;
 letter-spacing: 1px;
 }
 
-.submit-btn{
+.submit-btn button{
 margin: 25px;
 width: 200px;
-color: #fff !important;
-background: #ff8308 !important;
+color: #fff;
+background: #ff8308;
 font-size: 16px;
 height: 40px;
 box-shadow: none;
@@ -139,6 +144,7 @@ line-height: 40px;
 cursor: pointer;
 white-space: nowrap;
 }
+
 
 /* .ql-toolbar .ql-snow{
 border: 1px solid #ccc;
