@@ -1,8 +1,21 @@
-.left-menu{
-    width: 66.6666%
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+.left-menu .minimize{
+   width: 66.666%;
+   position: absolute;
+   height: 700px;
+   background-color: white;
 }
 
-.left-menu p{
+.left-menu.expand{
+   width:99.999%;
+   position: absolute;
+   height: 700px;
+   background-color: white;
+
+}
+
+.left-menu .menu-title{
     padding: 14px 24px;
     background-color: #fff;
     box-shadow: 0 2px 4px 0 hsla(0,0%,81%,.5);
@@ -15,11 +28,179 @@
     text-transform: uppercase;
     font-weight: 600;
     overflow-wrap: normal;
+    
 }
 
 .left-menu img{
 width: 20px;
 height: 20px;
-margin-left: 700px;
+margin-left: 780px;
 cursor: pointer;
+position: absolute;
+
 }
+
+
+.case-study-bullets {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 36.5%;
+    z-index: 10;
+
+}
+
+.case-study-bullets ul li.click-prev {
+    transform: rotate(180deg);
+    display: flex;
+}
+
+.case-study-bullets ul li {
+    display: flex;
+    position: relative;
+    min-height: 1.25rem;
+    min-width: 1.8125rem;
+    font-size: 14px;
+    font-weight: 700;
+    align-items: center;
+    align-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    color: #737373;
+}
+
+.case-study-bullets ul li a {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    background: #737373;
+    margin: 0;
+  
+}
+
+.case-study-bullets ul li a span{
+    display: none;
+}
+
+.case-study-bullets ul li a.curr-case {
+    text-align: center;
+    width: .8125rem;
+    height: .8125rem;
+    padding: .3125rem;
+    border-radius: 50%;
+    z-index: 10;
+    border: 2px solid;
+        /* border-top-color: currentcolor;
+        border-right-color: currentcolor;
+        border-bottom-color: currentcolor;
+        border-left-color: currentcolor; */
+    border-color: #737373;
+    background: none;
+    cursor: pointer;
+}
+
+.case-study-bullets ul li a.curr-case span {
+    display: block;
+}
+.case-study p{
+    font-size: 14px;
+line-height: 20px;
+text-align: justify;
+}
+
+.case-study p ol li{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.case-study .header{
+    font-weight: bold;
+}
+
+#page-0{
+    background: #aac5ae;;
+    padding: 0 20px;
+min-height: 70vh;
+}
+
+#page-1{
+    background: #72584d;;
+    padding: 0 20px;
+min-height: 70vh;
+}
+
+
+ .case-study{
+ padding: 25px 80px 25px 25px;
+position: relative;
+background: #fff;
+opacity: .8;
+color: #000;
+min-height: 70vh;
+}
+
+/*
+.case-study-bullets{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 36.5%;
+    z-index: 10;
+}
+
+.click-prev{
+    transform: rotate(180deg);
+    display: flex;
+}
+
+.case-study-bullets ul li{
+    display: flex;
+    position: relative;
+    min-height: 1.25rem;
+    min-width: 1.8125rem;
+    font-size: 14px;
+    font-weight: 700;
+    align-items: center;
+    align-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    color: #737373;;
+}
+
+.case-study-bullets ul li a{
+    width: .5rem;
+    height: .5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    background: #737373;
+    margin: 0;
+
+}
+
+.case-study-bullets ul li a span{
+    cursor: pointer;
+color: #737373;
+display: none;
+}
+
+ .curs-case{
+text-align: center;
+width: 1.8125rem;
+height: 1.8125rem;
+padding: .3125rem;
+border-radius: 50%;
+z-index: 10;
+border: 2px solid;
+border-color: #737373;
+background: none;
+cursor: pointer;
+
+}
+
+.curs-case span{
+    display: block;
+}  */

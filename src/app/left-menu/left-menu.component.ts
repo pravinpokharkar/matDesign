@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-left-menu',
@@ -7,12 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftMenuComponent implements OnInit {
 
-  constructor() { }
+  private fragment:string;
+  constructor(private route:ActivatedRoute) { }
   
+stat:boolean=false;
+
+classChange(){
+  this.stat= !this.stat;
+  console.log(this.stat)
+}
 
 
 
   ngOnInit() {
+    this.route.fragment.subscribe(fragment=>{this.fragment=fragment})
+  }
+
+  ngAfterViewInit():void{
+   try{
+     document.querySelector('#'+ this.fragment).scrollIntoView();
+   } catch(e){}
   }
 
 }

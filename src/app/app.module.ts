@@ -14,7 +14,22 @@ import { TestComponent } from './test/test.component';
 import { QuillModule } from 'ngx-quill'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion'; 
+import { CommonModule } from '@angular/common';
+import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { RouterModule, ExtraOptions } from '@angular/router';
+// import { NgxPageScrollModule } from 'ngx-page-scroll';
 
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'enabled',
+};
+
+RouterModule.forRoot( [],{useHash:true})
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +37,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     LeftMenuComponent,
     RightMenuComponent,
     TestComponent,
-    
+    // NgxPageScrollModule
   ],
   imports: [
+  
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -34,10 +50,14 @@ import {MatExpansionModule} from '@angular/material/expansion';
     FormsModule,
     ReactiveFormsModule,
     MatExpansionModule,
+    CommonModule,
+    PerfectScrollbarModule,
     
-  
   ],
-  providers: [TimerService],
+  providers: [TimerService,{
+    provide: PERFECT_SCROLLBAR_CONFIG,
+    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
