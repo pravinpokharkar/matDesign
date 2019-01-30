@@ -1,144 +1,238 @@
 
- 
-  
-  <div class="left-menu" [ngClass]="stat? 'expand': 'minimize'" >
-   <p class="menu-title"> Case Study
-   <img  *ngIf="!stat" src="/assets/806b66a55cf7d69b938e5af727467fc5.png"  (click) ="classChange()" 
-    href="">
-    <img *ngIf="stat"[ngStyle]="{right: '36px'}" src="/assets/71f281ea23a2b86dcece317f7e5a1172.png" (click) ="classChange()">
-   </p>
+<div class="left-menu" >
+  <p class="menu-title"> Case Study
+    <img *ngIf="!stat" src="/assets/806b66a55cf7d69b938e5af727467fc5.png" (click)="classChange()" href="">
+    <img *ngIf="stat" [ngStyle]="{right: '20px'}" src="/assets/71f281ea23a2b86dcece317f7e5a1172.png" (click)="classChange()">
+  </p>
 
-   <div class="row">
-       <div class="col-md-4">
 
-      
-     
-   <perfect-scrollbar style="max-width: 840px; max-height: 500px;" [config]="config">
-  
-<div id="page-0" tab-index="0">
-    <div class="case-study">
-        <p class="header">  The situation</p>
-        <p> You are to assume the role of the recently appointed Regional Director in Chocó Bliss International (CBI), a growing global confectionary company. As part of CBI’s vision to expand its market share over the next 5 years, the Board is launching a new brand of chocolate bars in the country of Palzag in the next 9 months. This range of chocolate bars, which contains 7 different bars with 7 different flavors, should create a big impact with its target consumers, who it is intended will switch to this range from other competing products. </p>
+  <div class="overflow" >
+   
+
+    <div id="page-1" tab-index="1">
+      <div class="case-study" [ngClass]="stat? 'expand': 'minimize'">
+        <p class="header"> page1 The situation</p>
+        <p> You are to assume the role of the recently appointed Regional Director in Chocó Bliss International (CBI),
+          a growing global confectionary company. As part of CBI’s vision to expand its market share over the next 5
+          years, the Board is launching a new brand of chocolate bars in the country of Palzag in the next 9 months.
+          This range of chocolate bars, which contains 7 different bars with 7 different flavors, should create a big
+          impact with its target consumers, who it is intended will switch to this range from other competing products.
+        </p>
         <p class="header"> The New range</p>
         <p>7 bars are as follows: </p>
-            <ol>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-            
-            </ol>
-         <p>This is a premium chocolate candy brand aimed predominantly at female consumers aged 25 years- 45 years. The brand character is modern, stylish and prestigious. The chocolate candy is longer lasting; it melts slowly in the mouth and has a smooth and creamy flavor that lingers. The cocoa beans are sourced from Mexico, Brazil and Peru. </p>   
-        
-    </div>
+        <ol>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+
+        </ol>
+        <p>This is a premium chocolate candy brand aimed predominantly at female consumers aged 25 years- 45 years. The
+          brand character is modern, stylish and prestigious. The chocolate candy is longer lasting; it melts slowly in
+          the mouth and has a smooth and creamy flavor that lingers. The cocoa beans are sourced from Mexico, Brazil
+          and Peru. </p>
+
+      </div>
     </div>
 
-  <!-- 2nd page   -->
+    <!-- 2nd page   -->
 
-  <div id="page-1" tab-index="1">
+    <div id="page-2" tab-index="2">
 
       <div class="case-study">
-        <p class="header">  The situation</p>
-        <p> You are to assume the role of the recently appointed Regional Director in Chocó Bliss International (CBI), a growing global confectionary company. As part of CBI’s vision to expand its market share over the next 5 years, the Board is launching a new brand of chocolate bars in the country of Palzag in the next 9 months. This range of chocolate bars, which contains 7 different bars with 7 different flavors, should create a big impact with its target consumers, who it is intended will switch to this range from other competing products. </p>
+        <p class="header"> The situation</p>
+        <p> You are to assume the role of the recently appointed Regional Director in Chocó Bliss International (CBI),
+          a growing global confectionary company. As part of CBI’s vision to expand its market share over the next 5
+          years, the Board is launching a new brand of chocolate bars in the country of Palzag in the next 9 months.
+          This range of chocolate bars, which contains 7 different bars with 7 different flavors, should create a big
+          impact with its target consumers, who it is intended will switch to this range from other competing products.
+        </p>
         <p class="header"> The New range</p>
         <p>7 bars are as follows: </p>
-            <ol>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-                <li> The Dark Chocolate</li>
-            
-            </ol>
-         <p>This is a premium chocolate candy brand aimed predominantly at female consumers aged 25 years- 45 years. The brand character is modern, stylish and prestigious. The chocolate candy is longer lasting; it melts slowly in the mouth and has a smooth and creamy flavor that lingers. The cocoa beans are sourced from Mexico, Brazil and Peru. </p>   
-        
-    </div>
-</div>
-  
+        <ol>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
 
+        </ol>
+        <p>This is a premium chocolate candy brand aimed predominantly at female consumers aged 25 years- 45 years. The
+          brand character is modern, stylish and prestigious. The chocolate candy is longer lasting; it melts slowly in
+          the mouth and has a smooth and creamy flavor that lingers. The cocoa beans are sourced from Mexico, Brazil
+          and Peru. </p>
 
-  <!-- 3rd page -->
-  
-  <div  id="page-2" tab-index="2">
-
-        <div class="case-study">
-          <p class="header">  page 2 The situation</p>
-          <p> You are to assume the role of the recently appointed Regional Director in Chocó Bliss International (CBI), a growing global confectionary company. As part of CBI’s vision to expand its market share over the next 5 years, the Board is launching a new brand of chocolate bars in the country of Palzag in the next 9 months. This range of chocolate bars, which contains 7 different bars with 7 different flavors, should create a big impact with its target consumers, who it is intended will switch to this range from other competing products. </p>
-          <p class="header"> The New range</p>
-          <p>7 bars are as follows: </p>
-              <ol>
-                  <li> The Dark Chocolate</li>
-                  <li> The Dark Chocolate</li>
-                  <li> The Dark Chocolate</li>
-                  <li> The Dark Chocolate</li>
-                  <li> The Dark Chocolate</li>
-                  <li> The Dark Chocolate</li>
-                  <li> The Dark Chocolate</li>
-              
-              </ol>
-           <p>This is a premium chocolate candy brand aimed predominantly at female consumers aged 25 years- 45 years. The brand character is modern, stylish and prestigious. The chocolate candy is longer lasting; it melts slowly in the mouth and has a smooth and creamy flavor that lingers. The cocoa beans are sourced from Mexico, Brazil and Peru. </p>   
-          
       </div>
+    </div>
+
+
+
+    <!-- 3rd page -->
+
+    <div id="page-3" tab-index="3">
+
+      <div class="case-study">
+        <p class="header"> page 3 The situation</p>
+        <p> You are to assume the role of the recently appointed Regional Director in Chocó Bliss International (CBI),
+          a growing global confectionary company. As part of CBI’s vision to expand its market share over the next 5
+          years, the Board is launching a new brand of chocolate bars in the country of Palzag in the next 9 months.
+          This range of chocolate bars, which contains 7 different bars with 7 different flavors, should create a big
+          impact with its target consumers, who it is intended will switch to this range from other competing products.
+        </p>
+        <p class="header"> The New range</p>
+        <p>7 bars are as follows: </p>
+        <ol>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+
+        </ol>
+        <p>This is a premium chocolate candy brand aimed predominantly at female consumers aged 25 years- 45 years. The
+          brand character is modern, stylish and prestigious. The chocolate candy is longer lasting; it melts slowly in
+          the mouth and has a smooth and creamy flavor that lingers. The cocoa beans are sourced from Mexico, Brazil
+          and Peru. </p>
+
+      </div>
+    </div>
+
+
+    <!-- 4th page -->
+
+    <div id="page-4" tab-index="4">
+
+      <div class="case-study">
+        <p class="header"> page 4 The situation</p>
+        <p> You are to assume the role of the recently appointed Regional Director in Chocó Bliss International (CBI),
+          a growing global confectionary company. As part of CBI’s vision to expand its market share over the next 5
+          years, the Board is launching a new brand of chocolate bars in the country of Palzag in the next 9 months.
+          This range of chocolate bars, which contains 7 different bars with 7 different flavors, should create a big
+          impact with its target consumers, who it is intended will switch to this range from other competing products.
+        </p>
+        <p class="header"> The New range</p>
+        <p>7 bars are as follows: </p>
+        <ol>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+
+        </ol>
+        <p>This is a premium chocolate candy brand aimed predominantly at female consumers aged 25 years- 45 years. The
+          brand character is modern, stylish and prestigious. The chocolate candy is longer lasting; it melts slowly in
+          the mouth and has a smooth and creamy flavor that lingers. The cocoa beans are sourced from Mexico, Brazil
+          and Peru. </p>
+
+      </div>
+    </div>
+
+
+
+    <!-- 5th page -->
+
+    <div id="page-5" tab-index="5">
+
+      <div class="case-study">
+        <p class="header"> page 5 The situation</p>
+        <p> You are to assume the role of the recently appointed Regional Director in Chocó Bliss International (CBI),
+          a growing global confectionary company. As part of CBI’s vision to expand its market share over the next 5
+          years, the Board is launching a new brand of chocolate bars in the country of Palzag in the next 9 months.
+          This range of chocolate bars, which contains 7 different bars with 7 different flavors, should create a big
+          impact with its target consumers, who it is intended will switch to this range from other competing products.
+        </p>
+        <p class="header"> The New range</p>
+        <p>7 bars are as follows: </p>
+        <ol>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+          <li> The Dark Chocolate</li>
+
+        </ol>
+        <p>This is a premium chocolate candy brand aimed predominantly at female consumers aged 25 years- 45 years. The
+          brand character is modern, stylish and prestigious. The chocolate candy is longer lasting; it melts slowly in
+          the mouth and has a smooth and creamy flavor that lingers. The cocoa beans are sourced from Mexico, Brazil
+          and Peru. </p>
+
+      </div>
+    </div>
+    <!-- bullets -->
+
+
+
+
+    <div class="case-study-bullets">
+      <ul>
+        <li class="click-prev">
+        </li>
+        <li>
+          <a (click)="tr='1'" [ngClass]="(tr=='1')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-1'">
+            <span>1</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="tr='2'" [ngClass]="(tr=='2')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-2'">
+            <span>2</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="tr='3'" [ngClass]="(tr=='3')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-3'">
+            <span>3</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="tr='4'" [ngClass]="(tr=='4')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-4'">
+            <span>4</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="tr='5'" [ngClass]="(tr=='5')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-5'">
+            <span>5</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="tr='6'" [ngClass]="(tr=='6')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-6'">
+            <span>6</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="tr='7'" [ngClass]="(tr=='7')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-7'">
+            <span>7</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="tr='8'" [ngClass]="(tr=='8')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-8'">
+            <span>8</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="tr='9'" [ngClass]="(tr=='9')?'curr-case':'my-class2'" class="" [ngx-scroll-to]="'#page-9'">
+            <span>9</span>
+          </a>
+        </li>
+        <li class="click-next">
+        </li>
+      </ul>
+    </div>
+
+    <!-- </perfect-scrollbar> -->
+
   </div>
-
-<!-- bullets -->
-
-
-
-
-<div class="case-study-bullets">
-        <ul>
-          <li class="click-prev">
-          </li>
-              <li>
-            <a (click)="tr='1'" [ngClass]="(tr=='1')?'curr-case':'my-class2'" class="" >
-              <span>1</span>
-            </a>
-          </li><li>
-            <a   (click)="tr='2'" [ngClass]="(tr=='2')?'curr-case':'my-class2'"class="" [routerLink]="['.']" fragment="page-2">
-              <span>2</span>
-            </a>
-          </li><li>
-            <a  (click)="tr='3'" [ngClass]="(tr=='3')?'curr-case':'my-class2'"class="">
-              <span>3</span>
-            </a>
-          </li><li>
-            <a  (click)="tr='4'" [ngClass]="(tr=='4')?'curr-case':'my-class2'" class="">
-              <span>4</span>
-            </a>
-          </li><li>
-            <a  (click)="tr='5'" [ngClass]="(tr=='5')?'curr-case':'my-class2'" class="">
-              <span>5</span>
-            </a>
-          </li><li>
-            <a  (click)="tr='6'" [ngClass]="(tr=='6')?'curr-case':'my-class2'" class="">
-              <span>6</span>
-            </a>
-          </li><li>
-            <a  (click)="tr='7'" [ngClass]="(tr=='7')?'curr-case':'my-class2'" class="">
-              <span>7</span>
-            </a>
-          </li><li>
-            <a  (click)="tr='8'" [ngClass]="(tr=='8')?'curr-case':'my-class2'" class="">
-              <span>8</span>
-            </a>
-          </li><li>
-            <a  (click)="tr='9'" [ngClass]="(tr=='9')?'curr-case':'my-class2'" class="">
-              <span>9</span>
-            </a>
-          </li>
-          <li class="click-next">
-              </li>
-              </ul>
+  <!-- </div> 
 </div>
-  </perfect-scrollbar>
-
-</div>
-</div> 
-
+</div> -->
 </div>

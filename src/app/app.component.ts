@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ClsSendService } from './cls-send.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'casestudy';
+
+  cls: string= "col-lg-8"
+constructor(
+  private clsSendService: ClsSendService
+){
+
+}
+
+
+ngOnInit(){
+  this.clsSendService.receive(str=>{
+    this.cls=str;
+  })
+}
+
 }

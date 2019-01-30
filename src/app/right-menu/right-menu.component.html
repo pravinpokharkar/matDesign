@@ -1,193 +1,195 @@
 
+     
 <div class="right-menu">
-    <div class="title">Questions</div>
-              
-  <!-- <div *ngFor="let problem of problems"> -->
-<mat-accordion>
+   <div class="title">Questions</div>
+
+   <div class="questions">
+      <mat-accordion>
 
 
-   <mat-expansion-panel hideToggle="true"  (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-         <mat-expansion-panel-header  [collapsedHeight]="'80px'" [expandedHeight]="'70px'">
-            <span>1.</span>
+         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false">
+            <mat-expansion-panel-header [collapsedHeight]="'80px'" [expandedHeight]="'70px'">
+               <span>1.</span>
                <p> 'What do you think about the launching of a new brand of chocolate bars mentioned in the case?'</p>
 
-                   <div class="edit-btn" *ngIf="!panelOpenState">
-                        <button mat-button>Edit</button>
-                  </div>
-         </mat-expansion-panel-header>
-      <div class="text-editor" >
-       <quill-editor  [(ngModel)]="length" (onContentChanged)="textChanged($event)"   class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"> 
-          <div quill-editor-toolbar class="ql-toolbar ql-snow" >
-               <span class="ql-formats">
-               <button class="ql-bold" [title]="'Bold'"></button>
-               <button class="ql-italic"></button>
-               <button class="ql-underline"></button>
-               <button class="ql-indent" value="-1"></button>
-               <button class="ql-indent" value="+1"></button>
-               <button class="ql-align" value=""> </button>
-               <button class="ql-align" value="center"> </button>
-               <button class="ql-align" value="right"> </button>
-               <button class="ql-list" value="ordered"></button>
-               <button class="ql-list" value="bullet"></button>
-              </span>
-          </div>
-         
-       </quill-editor> 
-           <div id="toolbar-0">
-                <button mat-button>{{bttn}}</button>
-           </div>
-       </div>
-   </mat-expansion-panel>
-
-<!-- 2nd Question -->
-
-<mat-expansion-panel hideToggle="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false" >
-      <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'" >
-         <span>2.</span>
-            <p> 'Based on the information above, what will be your overall strategy to ensure an effective product launch?'</p>
-
-                <div class="edit-btn" *ngIf="!panelOpenState">
-                     <button mat-button>Edit</button>
-               </div>
-      </mat-expansion-panel-header>
-   <div class="text-editor">
-    <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"> 
-       <div quill-editor-toolbar class="ql-toolbar ql-snow" >
-            <span class="ql-formats">
-            <button class="ql-bold" [title]="'Bold'"></button>
-            <button class="ql-italic"></button>
-            <button class="ql-underline"></button>
-            <button class="ql-indent" value="-1"></button>
-            <button class="ql-indent" value="+1"></button>
-            <button class="ql-align" value=""> </button>
-            <button class="ql-align" value="center"> </button>
-            <button class="ql-align" value="right"> </button>
-            <button class="ql-list" value="ordered"></button>
-            <button class="ql-list" value="bullet"></button>
-           </span>
-       </div>
-    </quill-editor> 
-        <div id="toolbar-0">
-             <button mat-button>Update</button>
-        </div>
-    </div>
-</mat-expansion-panel>
-
-<!-- 3rd question down -->
-<mat-expansion-panel hideToggle="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-<mat-expansion-panel-header [collapsedHeight]="'80px'" [expandedHeight]="'70px'" >
-      <span>3.</span>
-         <p> 'Outline an implementation plan of the major project steps you envisage. '</p>
-
-             <div class="edit-btn" *ngIf="!panelOpenState">
+               <div class="edit-btn" *ngIf="!panelOpenState1">
                   <button mat-button>Edit</button>
-            </div>
-   </mat-expansion-panel-header>
-<div class="text-editor">
- <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"> 
-    <div quill-editor-toolbar class="ql-toolbar ql-snow" >
-         <span class="ql-formats">
-         <button class="ql-bold" [title]="'Bold'"></button>
-         <button class="ql-italic"></button>
-         <button class="ql-underline"></button>
-         <button class="ql-indent" value="-1"></button>
-         <button class="ql-indent" value="+1"></button>
-         <button class="ql-align" value=""> </button>
-         <button class="ql-align" value="center"> </button>
-         <button class="ql-align" value="right"> </button>
-         <button class="ql-list" value="ordered"></button>
-         <button class="ql-list" value="bullet"></button>
-        </span>
-    </div>
- </quill-editor> 
-     <div id="toolbar-0">
-          <button mat-button>Update</button>
-     </div>
- </div>
-</mat-expansion-panel>
-
-
-<!-- 4th Question down -->
-
-<mat-expansion-panel hideToggle="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-      <mat-expansion-panel-header [collapsedHeight]="'130px'" [expandedHeight]="'120px'">
-            <span>4.</span>
-               <p> 'Please provide an indication of the key tasks, departments and stakeholders that would be involved at each step. How will you ensure that everyone is on the same page and expectations of each are adequately met?'</p>
-      
-                   <div class="edit-btn" *ngIf="!panelOpenState">
-                        <button mat-button>Edit</button>
-                  </div>
-         </mat-expansion-panel-header>
-      <div class="text-editor">
-       <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"> 
-          <div quill-editor-toolbar class="ql-toolbar ql-snow" >
-               <span class="ql-formats">
-               <button class="ql-bold" [title]="'Bold'"></button>
-               <button class="ql-italic"></button>
-               <button class="ql-underline"></button>
-               <button class="ql-indent" value="-1"></button>
-               <button class="ql-indent" value="+1"></button>
-               <button class="ql-align" value=""> </button>
-               <button class="ql-align" value="center"> </button>
-               <button class="ql-align" value="right"> </button>
-               <button class="ql-list" value="ordered"></button>
-               <button class="ql-list" value="bullet"></button>
-              </span>
-          </div>
-       </quill-editor> 
-           <div id="toolbar-0">
-                <button mat-button>Update</button>
-           </div>
-       </div>
-      </mat-expansion-panel>
-      
-<!-- 5th question down -->
-
-<mat-expansion-panel hideToggle="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false" >
-      <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'" >
-         <span>5.</span>
-            <p> 'Are there any difficulties/challenges/risks that might arise? If yes, what are they and how you intend to resolve those?'</p>
-
-                <div class="edit-btn" *ngIf="!panelOpenState">
-                     <button mat-button>Edit</button>
                </div>
-      </mat-expansion-panel-header>
-   <div class="text-editor">
-    <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"> 
-       <div quill-editor-toolbar class="ql-toolbar ql-snow" >
-            <span class="ql-formats">
-            <button class="ql-bold" [title]="'Bold'"></button>
-            <button class="ql-italic"></button>
-            <button class="ql-underline"></button>
-            <button class="ql-indent" value="-1"></button>
-            <button class="ql-indent" value="+1"></button>
-            <button class="ql-align" value=""> </button>
-            <button class="ql-align" value="center"> </button>
-            <button class="ql-align" value="right"> </button>
-            <button class="ql-list" value="ordered"></button>
-            <button class="ql-list" value="bullet"></button>
-           </span>
-       </div>
-    </quill-editor> 
-        <div id="toolbar-0">
-             <button mat-button>Update</button>
-        </div>
-    </div>
-</mat-expansion-panel>
+            </mat-expansion-panel-header>
+            <div class="text-editor">
+               <quill-editor [(ngModel)]="length" (onContentChanged)="textChanged($event)" class="ng-valid ng-dirty ng-touched"
+                  customToolbarPosition="bottom">
+                  <div quill-editor-toolbar class="ql-toolbar ql-snow">
+                     <span class="ql-formats">
+                        <button class="ql-bold" [title]="'Bold'"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                        <button class="ql-align" value=""> </button>
+                        <button class="ql-align" value="center"> </button>
+                        <button class="ql-align" value="right"> </button>
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                     </span>
+                  </div>
+
+               </quill-editor>
+               <div id="toolbar-0">
+                  <button mat-button>{{bttn}}</button>
+               </div>
+            </div>
+         </mat-expansion-panel>
+
+         <!-- 2nd Question -->
+
+         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
+            <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'">
+               <span>2.</span>
+               <p> 'Based on the information above, what will be your overall strategy to ensure an effective product
+                  launch?'</p>
+
+               <div class="edit-btn" *ngIf="!panelOpenState2">
+                  <button mat-button>Edit</button>
+               </div>
+            </mat-expansion-panel-header>
+            <div class="text-editor">
+               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom">
+                  <div quill-editor-toolbar class="ql-toolbar ql-snow">
+                     <span class="ql-formats">
+                        <button class="ql-bold" [title]="'Bold'"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                        <button class="ql-align" value=""> </button>
+                        <button class="ql-align" value="center"> </button>
+                        <button class="ql-align" value="right"> </button>
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                     </span>
+                  </div>
+               </quill-editor>
+               <div id="toolbar-0">
+                  <button mat-button>Update</button>
+               </div>
+            </div>
+         </mat-expansion-panel>
+
+         <!-- 3rd question down -->
+         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState3 = true" (closed)="panelOpenState3 = false">
+            <mat-expansion-panel-header [collapsedHeight]="'80px'" [expandedHeight]="'70px'">
+               <span>3.</span>
+               <p> 'Outline an implementation plan of the major project steps you envisage. '</p>
+
+               <div class="edit-btn" *ngIf="!panelOpenState3">
+                  <button mat-button>Edit</button>
+               </div>
+            </mat-expansion-panel-header>
+            <div class="text-editor">
+               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom">
+                  <div quill-editor-toolbar class="ql-toolbar ql-snow">
+                     <span class="ql-formats">
+                        <button class="ql-bold" [title]="'Bold'"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                        <button class="ql-align" value=""> </button>
+                        <button class="ql-align" value="center"> </button>
+                        <button class="ql-align" value="right"> </button>
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                     </span>
+                  </div>
+               </quill-editor>
+               <div id="toolbar-0">
+                  <button mat-button>Update</button>
+               </div>
+            </div>
+         </mat-expansion-panel>
+
+
+         <!-- 4th Question down -->
+
+         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState4 = true" (closed)="panelOpenState4 = false">
+            <mat-expansion-panel-header [collapsedHeight]="'130px'" [expandedHeight]="'120px'">
+               <span>4.</span>
+               <p> 'Please provide an indication of the key tasks, departments and stakeholders that would be involved
+                  at each step. How will you ensure that everyone is on the same page and expectations of each are
+                  adequately met?'</p>
+
+               <div class="edit-btn" *ngIf="!panelOpenState4">
+                  <button mat-button>Edit</button>
+               </div>
+            </mat-expansion-panel-header>
+            <div class="text-editor">
+               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom">
+                  <div quill-editor-toolbar class="ql-toolbar ql-snow">
+                     <span class="ql-formats">
+                        <button class="ql-bold" [title]="'Bold'"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                        <button class="ql-align" value=""> </button>
+                        <button class="ql-align" value="center"> </button>
+                        <button class="ql-align" value="right"> </button>
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                     </span>
+                  </div>
+               </quill-editor>
+               <div id="toolbar-0">
+                  <button mat-button>Update</button>
+               </div>
+            </div>
+         </mat-expansion-panel>
+
+         <!-- 5th question down -->
+
+         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState5 = true" (closed)="panelOpenState5 = false">
+            <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'">
+               <span>5.</span>
+               <p> 'Are there any difficulties/challenges/risks that might arise? If yes, what are they and how you
+                  intend to resolve those?'</p>
+
+               <div class="edit-btn" *ngIf="!panelOpenState5">
+                  <button mat-button>Edit</button>
+               </div>
+            </mat-expansion-panel-header>
+            <div class="text-editor">
+               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom">
+                  <div quill-editor-toolbar class="ql-toolbar ql-snow">
+                     <span class="ql-formats">
+                        <button class="ql-bold" [title]="'Bold'"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                        <button class="ql-align" value=""> </button>
+                        <button class="ql-align" value="center"> </button>
+                        <button class="ql-align" value="right"> </button>
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                     </span>
+                  </div>
+               </quill-editor>
+               <div id="toolbar-0">
+                  <button mat-button>Update</button>
+               </div>
+            </div>
+         </mat-expansion-panel>
 
 
 
-</mat-accordion>
-<div class="submit-btn ">
-      <button mat-button >Submit Assessment</button>
+      </mat-accordion>
+      <div class="submit-btn ">
+         <button mat-button>Submit Assessment</button>
+
+      </div>
+      <!-- </perfect-scrollbar> -->
+
+   </div>
 
 </div>
-</div>
-
-
-
-
-
-
-
-

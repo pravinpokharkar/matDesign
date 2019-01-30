@@ -1,19 +1,33 @@
-@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+/* @import '~perfect-scrollbar/css/perfect-scrollbar.css'; */
 
-.left-menu .minimize{
-   width: 66.666%;
-   position: absolute;
+.left-menu {
+   /* width: 66.666%; */
+   /* position: absolute; */
    height: 700px;
    background-color: white;
+   
 }
 
-.left-menu.expand{
+.overflow{
+    overflow: scroll;
+    height: 520px;
+   
+}
+
+
+.expand{
+    margin-left: 200px;
+    margin-right:200px;
+}
+
+/* .left-menu.expand{
    width:99.999%;
    position: absolute;
    height: 700px;
    background-color: white;
+   overflow: scroll;
 
-}
+} */
 
 .left-menu .menu-title{
     padding: 14px 24px;
@@ -22,7 +36,7 @@
     display: flex;
     flex-grow: 0;
     flex-shrink: 0;
-    position: relative;
+    position: static;
     margin: 0;
     font-size: 18px;
     text-transform: uppercase;
@@ -35,6 +49,7 @@
 width: 20px;
 height: 20px;
 margin-left: 780px;
+margin-right: 20px;
 cursor: pointer;
 position: absolute;
 
@@ -42,11 +57,12 @@ position: absolute;
 
 
 .case-study-bullets {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 35%;
     transform: translateY(-50%);
-    right: 36.5%;
+    right: 6.5%;
     z-index: 10;
+   
 
 }
 
@@ -120,13 +136,13 @@ text-align: justify;
     font-weight: bold;
 }
 
-#page-0{
+#page-1{
     background: #aac5ae;;
     padding: 0 20px;
 min-height: 70vh;
 }
 
-#page-1{
+#page-2{
     background: #72584d;;
     padding: 0 20px;
 min-height: 70vh;
@@ -134,13 +150,15 @@ min-height: 70vh;
 
 
  .case-study{
- padding: 25px 80px 25px 25px;
+padding: 25px 80px 25px 25px;
 position: relative;
 background: #fff;
 opacity: .8;
 color: #000;
 min-height: 70vh;
-}
+ }
+
+ 
 
 /*
 .case-study-bullets{

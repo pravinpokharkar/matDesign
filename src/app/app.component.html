@@ -1,30 +1,168 @@
-<div class="container">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <app-toolbar></app-toolbar>
+
+        </div>
+
         <div class="row">
-         <div class="col-md-12">
-         <app-toolbar></app-toolbar>
-</div>
-</div>
-</div>
+            <div [class]="cls">
+                <app-left-menu></app-left-menu>
+            </div>
 
+                <div class="col-lg-4">
+                    <app-right-menu></app-right-menu>
+                </div>
+        </div>
 
-
-
-<div class="container">
-        <div class="row">
-         <div class="col-md-4">
-<app-right-menu></app-right-menu>
-
-       </div>
-         </div>
+    </div>
 </div>
 
-<div class="container">
-        <div class="row">
-         <div class="col-md-4">
-<app-left-menu></app-left-menu>
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <div class="row">
 
-       </div>
-         </div>
-</div>
+            </div>
 
-      
+            
+        </div>
+
+    </div> -->
+
+<!-- <app-left-menu></app-left-menu>   -->
+
+<!-- 
+<div id="list-example" class="list-group">
+    <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+    <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+    <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+  </div>
+ 
+  <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" [style]="{'overflow': scroll}">
+    <h4 id="list-item-1"> <ol>
+        <li> Page 1 The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol>
+    <ol>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol>
+    <ol>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol></h4>
+    <p>...</p>
+    <h4 id="list-item-2"><ol>
+        <li> Page 2 The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol>
+    <ol>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol>
+    <ol>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol></h4>
+    <p>...</p>
+    <h4 id="list-item-3"><ol>
+        <li> Page 3 The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol>
+    <ol>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol>
+    <ol>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol></h4>
+    <p>...</p>
+    <h4 id="list-item-4">page4<ol>
+        <li> Page 1 The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol>
+    <ol>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol>
+    <ol>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+        <li> The Dark Chocolate</li>
+    
+    </ol></h4>
+    <p>...</p>
+  </div> -->

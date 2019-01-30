@@ -4,12 +4,14 @@
 
 .right-menu{
 background: #fff;
-box-shadow: 3px 6px 9px 4px #9b9b9b;
+ box-shadow: 0 0 9px 0 #9b9b9b;
 position: relative;
-float: right;
-width: 33.3333%;
-max-height: 300px;
+/* float: right; */
+/* width: 33.3333%; */
+
+
 }
+
 
 .right-menu .title{
 padding: 14px 24px 0;
@@ -19,7 +21,7 @@ text-transform: uppercase;
 font-weight: 600;
 font-size: 18px;
 margin-bottom: 20px;
-/* overflow: scroll; */
+
 }
 
 mat-expansion-panel{
@@ -33,6 +35,10 @@ mat-accordion{
     
 }
 
+.questions{
+max-height: 520px;
+overflow: scroll;
+}
 
 mat-expansion-panel-header{
 display: flex;
@@ -63,7 +69,7 @@ margin-top: 25px;
 
 
 .edit-btn{
-font-size: 19px;
+font-size: 14px;
 line-height: 3px;
 font-weight: 200;
 font-weight: normal;
@@ -83,11 +89,11 @@ cursor: pointer;
 
 .edit-btn button{
     display: inline-block;
-    border: 1px solid #333;
-    width: 40px;
-    border-radius: 10px;
-    padding: 1px 2px;
-    margin-top:25px;
+border: 1px solid #333;
+width: 40px;
+border-radius: 13px;
+padding: 8px 6px;
+margin-top: 25px;
 
 }
 
@@ -129,7 +135,8 @@ letter-spacing: 1px;
 }
 
 .submit-btn button{
-margin: 25px;
+margin-top: 20px;
+margin-right: 10px;
 width: 200px;
 color: #fff;
 background: #ff8308;

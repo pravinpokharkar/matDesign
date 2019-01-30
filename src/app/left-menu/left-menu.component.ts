@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ClsSendService } from '../cls-send.service';
 
 @Component({
   selector: 'app-left-menu',
@@ -8,26 +9,31 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LeftMenuComponent implements OnInit {
 
-  private fragment:string;
-  constructor(private route:ActivatedRoute) { }
+  
+
+ 
+  constructor(
+    private clsSendService: ClsSendService 
+  ) { }
   
 stat:boolean=false;
 
 classChange(){
   this.stat= !this.stat;
   console.log(this.stat)
+  if(this.stat)
+  
+  this.clsSendService.send('col-lg-12');
+  else
+  this.clsSendService.send('col-lg-8')
 }
 
 
 
   ngOnInit() {
-    this.route.fragment.subscribe(fragment=>{this.fragment=fragment})
+    
   }
 
-  ngAfterViewInit():void{
-   try{
-     document.querySelector('#'+ this.fragment).scrollIntoView();
-   } catch(e){}
-  }
+ 
 
 }

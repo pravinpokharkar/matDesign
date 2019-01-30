@@ -18,14 +18,11 @@ import { CommonModule } from '@angular/common';
 import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { RouterModule, ExtraOptions } from '@angular/router';
-// import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { InViewportModule } from '@thisissoon/angular-inviewport';
+import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 
-const routerOptions: ExtraOptions = {
-  useHash: false,
-  anchorScrolling: 'enabled',
-};
 
-RouterModule.forRoot( [],{useHash:true})
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -37,7 +34,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LeftMenuComponent,
     RightMenuComponent,
     TestComponent,
-    // NgxPageScrollModule
+    
   ],
   imports: [
   
@@ -52,6 +49,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatExpansionModule,
     CommonModule,
     PerfectScrollbarModule,
+    ScrollToModule.forRoot(),
+    InViewportModule, 
+    ScrollSpyModule.forRoot()
     
   ],
   providers: [TimerService,{
