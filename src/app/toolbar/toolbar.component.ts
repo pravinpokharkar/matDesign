@@ -33,9 +33,8 @@ export class ToolbarComponent implements OnInit {
       if (this.mainCounter !== 0 && this.subCounter == 0) {
         this.mainCounter--;
         this.subCounter = 60;
-        return
       }
-    }, 60000)
+    },1000 )
   }
 
 

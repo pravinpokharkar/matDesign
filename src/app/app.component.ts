@@ -9,7 +9,7 @@ import { ClsSendService } from './cls-send.service';
 export class AppComponent {
   title = 'casestudy';
 
-  cls: string= "col-lg-8"
+  cls: string= "col-lg-8 padding-0"
 constructor(
   private clsSendService: ClsSendService
 ){

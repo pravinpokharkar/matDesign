@@ -51,7 +51,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     ScrollToModule.forRoot(),
     InViewportModule, 
-    ScrollSpyModule.forRoot()
+    ScrollSpyModule.forRoot(),
+   
     
   ],
   providers: [TimerService,{

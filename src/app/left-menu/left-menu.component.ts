@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClsSendService } from '../cls-send.service';
 
@@ -17,6 +17,7 @@ export class LeftMenuComponent implements OnInit {
   ) { }
   
 stat:boolean=false;
+
 
 classChange(){
   this.stat= !this.stat;
