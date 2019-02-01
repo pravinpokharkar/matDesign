@@ -1,14 +1,14 @@
 
      
-<div class="right-menu">
+<div class="right-menu" [ngClass]="expansionStatus?'hideClass':'' ">
    <div class="title">Questions</div>
 
    <div class="questions">
-      <mat-accordion>
+      <mat-accordion multi="false">
 
 
-         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false">
-            <mat-expansion-panel-header [collapsedHeight]="'80px'" [expandedHeight]="'70px'">
+         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false" >
+            <mat-expansion-panel-header [collapsedHeight]="'80px'" [expandedHeight]="'80px'">
                <span>1.</span>
                <p> 'What do you think about the launching of a new brand of chocolate bars mentioned in the case?'</p>
 
@@ -17,7 +17,7 @@
                </div>
             </mat-expansion-panel-header>
             <div class="text-editor">
-               <quill-editor [(ngModel)]="length" (onContentChanged)="textChanged($event)" class="ng-valid ng-dirty ng-touched"
+               <quill-editor [(ngModel)]="length" (onContentChanged)="textChanged1($event)" class="ng-valid ng-dirty ng-touched"
                   customToolbarPosition="bottom">
                   <div quill-editor-toolbar class="ql-toolbar ql-snow">
                      <span class="ql-formats">
@@ -36,7 +36,7 @@
 
                </quill-editor>
                <div id="toolbar-0">
-                  <button mat-button>{{bttn}}</button>
+                  <button mat-button>{{bttn1}}</button>
                </div>
             </div>
          </mat-expansion-panel>
@@ -54,7 +54,7 @@
                </div>
             </mat-expansion-panel-header>
             <div class="text-editor">
-               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom">
+               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom" (onContentChanged)="textChanged2($event)">
                   <div quill-editor-toolbar class="ql-toolbar ql-snow">
                      <span class="ql-formats">
                         <button class="ql-bold" [title]="'Bold'"></button>
@@ -71,7 +71,7 @@
                   </div>
                </quill-editor>
                <div id="toolbar-0">
-                  <button mat-button>Update</button>
+                  <button mat-button>{{bttn2}}</button>
                </div>
             </div>
          </mat-expansion-panel>
@@ -87,7 +87,7 @@
                </div>
             </mat-expansion-panel-header>
             <div class="text-editor">
-               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom">
+               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"(onContentChanged)="textChanged3($event)">
                   <div quill-editor-toolbar class="ql-toolbar ql-snow">
                      <span class="ql-formats">
                         <button class="ql-bold" [title]="'Bold'"></button>
@@ -104,7 +104,7 @@
                   </div>
                </quill-editor>
                <div id="toolbar-0">
-                  <button mat-button>Update</button>
+                  <button mat-button>{{bttn3}}</button>
                </div>
             </div>
          </mat-expansion-panel>
@@ -124,7 +124,7 @@
                </div>
             </mat-expansion-panel-header>
             <div class="text-editor">
-               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom">
+               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"(onContentChanged)="textChanged4($event)">
                   <div quill-editor-toolbar class="ql-toolbar ql-snow">
                      <span class="ql-formats">
                         <button class="ql-bold" [title]="'Bold'"></button>
@@ -141,14 +141,14 @@
                   </div>
                </quill-editor>
                <div id="toolbar-0">
-                  <button mat-button>Update</button>
+                  <button mat-button>{{bttn4}}</button>
                </div>
             </div>
          </mat-expansion-panel>
 
          <!-- 5th question down -->
 
-         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState5 = true" (closed)="panelOpenState5 = false">
+         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState5 = true" (closed)="panelOpenState5 = false" (click)="onClickedEvent">
             <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'">
                <span>5.</span>
                <p> 'Are there any difficulties/challenges/risks that might arise? If yes, what are they and how you
@@ -159,7 +159,7 @@
                </div>
             </mat-expansion-panel-header>
             <div class="text-editor">
-               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom">
+               <quill-editor class="ng-valid ng-dirty ng-touched" customToolbarPosition="bottom"(onContentChanged)="textChanged5($event)">
                   <div quill-editor-toolbar class="ql-toolbar ql-snow">
                      <span class="ql-formats">
                         <button class="ql-bold" [title]="'Bold'"></button>
@@ -176,7 +176,7 @@
                   </div>
                </quill-editor>
                <div id="toolbar-0">
-                  <button mat-button>Update</button>
+                  <button mat-button>{{bttn5}}</button>
                </div>
             </div>
          </mat-expansion-panel>

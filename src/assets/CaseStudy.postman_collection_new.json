@@ -1,0 +1,144 @@
+{
+	"id": "dfaf0649-7f56-0837-4b58-b1fa4b10f8da",
+	"name": "CaseStudy",
+	"description": "Case Study APIs",
+	"order": [
+		"e013b4b8-df3d-1bae-0e8e-1cb1b989fa63",
+		"4d260bb6-ca70-f98b-1d74-9d1e926b965a",
+		"ba9e0e61-17e2-b43c-0007-e86627acd6cb"
+	],
+	"folders_order": [],
+	"folders": [],
+	"owner": 0,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "4d260bb6-ca70-f98b-1d74-9d1e926b965a",
+			"headers": "Authorization: Bearer d01eca699e15d5bc0a5b78990e3ef65f8a67482e153dfcd560bae2e4e1066ed5\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer d01eca699e15d5bc0a5b78990e3ef65f8a67482e153dfcd560bae2e4e1066ed5",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://simulationapi.ur-nl.com/users/current.json",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"auth": null,
+			"time": 1526633215850,
+			"name": "Get Current User",
+			"description": "Get Current User",
+			"collectionId": "dfaf0649-7f56-0837-4b58-b1fa4b10f8da",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "ba9e0e61-17e2-b43c-0007-e86627acd6cb",
+			"headers": "Authorization: Bearer d01eca699e15d5bc0a5b78990e3ef65f8a67482e153dfcd560bae2e4e1066ed5\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer d01eca699e15d5bc0a5b78990e3ef65f8a67482e153dfcd560bae2e4e1066ed5",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://simulationapi.ur-nl.com/case_study/companies/58cba141ba169e0eab2657c9/company_case_studies/595c859eba169ec47e4f20d4/user_company_case_studies/595ce021ba169edb9c733e90?include[company_case_study][include]=questions",
+			"queryParams": [
+				{
+					"key": "include[company_case_study][include]",
+					"value": "questions",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"auth": null,
+			"time": 1526633211778,
+			"name": "Get Case Study",
+			"description": "Get Case Study",
+			"collectionId": "dfaf0649-7f56-0837-4b58-b1fa4b10f8da",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "e013b4b8-df3d-1bae-0e8e-1cb1b989fa63",
+			"name": "GetAccessToken",
+			"collectionId": "dfaf0649-7f56-0837-4b58-b1fa4b10f8da",
+			"method": "POST",
+			"description": "GetAccessToken",
+			"headers": "Content-Type: application/x-www-form-urlencoded",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "scope",
+					"value": "user",
+					"type": "text"
+				},
+				{
+					"key": "client_id",
+					"value": "4874eafd0f7a240625e59b2b123a142a669923d5b0d31ae8743f6780a95187f5",
+					"type": "text"
+				},
+				{
+					"key": "client_secret",
+					"value": "908f6aee4d4cb27782ba55ae0c814bf43419f3220d696206212a29fe3a05cd88",
+					"type": "text"
+				},
+				{
+					"key": "auth_token",
+					"value": "azd4jXWWLagyb9KzgfDJ",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "https://simulationapi.ur-nl.com/oauth/token.json",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"auth": null,
+			"collection_id": "dfaf0649-7f56-0837-4b58-b1fa4b10f8da",
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}

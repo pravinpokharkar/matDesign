@@ -24,14 +24,15 @@ classChange(){
   console.log(this.stat)
   if(this.stat)
   
-  this.clsSendService.send('col-lg-12');
+  this.clsSendService.send('col-lg-12 padding-0');
   else
-  this.clsSendService.send('col-lg-8')
+  this.clsSendService.send('col-lg-8 padding-0')
 }
 
 
 
-  ngOnInit() {
+  ngOnInit(
+  ) {
     
   }
 

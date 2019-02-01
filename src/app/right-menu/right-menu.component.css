@@ -12,6 +12,9 @@ position: relative;
 
 }
 
+.hideClass{
+    visibility: hidden;
+}
 
 .right-menu .title{
 padding: 14px 24px 0;
@@ -32,12 +35,14 @@ width: 100%;
 
 mat-accordion{
     overflow: scroll;
+    scroll-behavior: auto;
     
 }
 
 .questions{
-max-height: 520px;
+max-height: 510px;
 overflow: scroll;
+scroll-behavior: auto;
 }
 
 mat-expansion-panel-header{

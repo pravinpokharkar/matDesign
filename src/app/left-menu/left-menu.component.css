@@ -3,15 +3,17 @@
 .left-menu {
    /* width: 66.666%; */
    /* position: absolute; */
-   height: 700px;
+   height: 610px;
    background-color: white;
    
    
 }
 
+
+
 .overflow{
     overflow: scroll;
-    height: 520px;
+    height: 560px;
 }
 
 
@@ -54,6 +56,7 @@ cursor: pointer;
 position: absolute;
 
 }
+
 
 .case-study{
     padding: 25px 80px 25px 25px;
@@ -123,7 +126,7 @@ min-height: 300px;
     display: none;
 }
 
-.case-study-bullets ul li a.curr-case {
+.case-study-bullets ul li a.active {
 text-align: center;
 width: 1.8125rem;
 height: 1.8125rem;
@@ -138,9 +141,14 @@ border: 2px solid;
 border-color: #737373;
 background: none;
 cursor: pointer;
+color:#737373;
+
 }
 
-.case-study-bullets ul li a.curr-case span {
+
+
+
+.case-study-bullets ul li a.active span {
     display: block;
 }
 .case-study p{
@@ -221,6 +229,11 @@ text-align: justify;
     cursor: pointer;
 }
 
+
+ sn-scroll-spy-section {
+    display: inline;
+    /* position: relative; */
+ }
 .click-next{
     
         content: "";
