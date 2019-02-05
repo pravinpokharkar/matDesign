@@ -21,6 +21,8 @@ import { RouterModule, ExtraOptions } from '@angular/router';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -52,7 +54,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ScrollToModule.forRoot(),
     InViewportModule, 
     ScrollSpyModule.forRoot(),
-   
+    HttpClientModule
     
   ],
   providers: [TimerService,{

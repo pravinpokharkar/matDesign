@@ -1,49 +1,57 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {interval} from 'rxjs';
-import { Time } from '@angular/common';
 
-
-
+import {  HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TimerService {
 
-  constructor() { 
-    
-    
-  }
+  constructor(
+     private http: HttpClient
+  ) { 
+   }
 
-  //  cnt(){
-  //    let counter=60;
-  //     setInterval(() => {
-  //    return counter--; 
-  //     }, 5000);
-    
-    // return Observable.interval(1000).set(
-    //   counter=>counter--)
+ 
+ getAccessToken(data:any): Observable<Object>{
+   
+   return this.http.post('https://simulationapi.ur-nl.com/oauth/token.json',data,{
+    headers: {
+      'Content-Type':'application/json'
+    }
+   })
+ }
+
+ getCaseStudy(accToken):Observable<Object>{
+   console.log(accToken)
+   
+   return this.http.get('https://simulationapi.ur-nl.com/case_study/companies/58cba141ba169e0eab2657c9/company_case_studies/595c859eba169ec47e4f20d4/user_company_case_studies/595ce021ba169edb9c733e90?include[company_case_study][include]=questions',{
+   headers:{
+    'Authorization': `${accToken}`,
+    'Content-Type':'application/json'
+   }
+  })
+ }
+
+//  private handleError(error: any) {
+//   let errMsg = (error.message) ? error.message :
+//       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+//   console.error(errMsg);
+//   return Observable.throw(errMsg);
+// }
+
+
+
+
    }
 
    
 
   
 
-  // timerObs(){
-  //   return Observable.create(
-  //     res=>{
-  //       for (let i=10; i>=0;i--)
-  //       {
-  //       res.next(i)
-  //       }
-  //     res.complete()
-  //   }
-    // )
-
-  // }
-// }
-
+ 
  
 
 

@@ -1,16 +1,17 @@
-mat-toolbar div{
-margin-left: 920px;
-font-size: .875rem;
-color: #fff;
-}
 
-mat-toolbar div span{
+
+mat-toolbar div div span{
     
-    color: #ff8308;
+    color: #ff8308 ;
     font-size: 1.25rem;
     font-weight: 700;
-    vertical-align: bottom;
+    display: inline;
+/* vertical-align: bottom; */
+    display: inline;
+    margin-left: 10px;
     }
+
+   
 
 .toolbar{
     background-color: #231c07;
@@ -19,4 +20,32 @@ mat-toolbar div span{
     display: inline-block;
     padding: 6px 10px 3px 0;
     border-right: 1px solid #3c3724;
+    
+}
+
+mat-toolbar div div{
+line-height: normal;
+text-align: center;
+font-weight: 400;
+font-size: .875rem;
+display: flex;
+align-items: center;
+margin-left: 940px;
+/* display: inline; */
+color:#fff;
+}
+
+@media only screen and (max-width: 768px){
+    mat-toolbar div div{
+        line-height: normal;
+        text-align: center;
+        font-weight: 400;
+        font-size: .875rem;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        /* display: inline; */
+        color:#fff;
+    }
+  
 }
