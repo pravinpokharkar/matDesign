@@ -31,6 +31,7 @@ mat-expansion-panel{
 
 border-bottom: 1px solid #c8c8c8;
 width: 100%;
+
 }
 
 mat-accordion{
@@ -40,17 +41,19 @@ mat-accordion{
 }
 
 .questions{
-max-height: 510px;
+max-height: 560px;
 overflow: scroll;
 scroll-behavior: auto;
+scroll-behavior: smooth; 
 }
 
 mat-expansion-panel-header{
-display: flex;
+/* display: flex; */
 flex-shrink: 0;
 flex-grow: 0;
 align-items: baseline;
 position: relative;
+height: 100% !important;
 }
 
 mat-expansion-panel-header span {

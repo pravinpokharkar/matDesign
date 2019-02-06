@@ -3,14 +3,17 @@
 <div class="right-menu" [ngClass]="expansionStatus?'hideClass':'' ">
    <div class="title">Questions</div>
 
-   <div class="questions">
-      <mat-accordion multi="false">
+   <div class="questions" >
+      <button (click)="start()">Click</button>
+      <mat-accordion  multi="false">
+         
+         <div *ngFor="let quest of  questionArray;let i=index">
+      
 
-
-         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false" >
-            <mat-expansion-panel-header [collapsedHeight]="'80px'" [expandedHeight]="'80px'">
-               <span>1.</span>
-               <p> 'What do you think about the launching of a new brand of chocolate bars mentioned in the case?'</p>
+         <mat-expansion-panel (click)="fire($event)" hideToggle="true" (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false" >
+            <mat-expansion-panel-header >
+               <span>{{i+1}}</span>
+               <p [innerHTML]="quest.body"></p>
 
                <div class="edit-btn" *ngIf="!panelOpenState1">
                   <button mat-button>Edit</button>
@@ -40,10 +43,11 @@
                </div>
             </div>
          </mat-expansion-panel>
+         </div>
 
          <!-- 2nd Question -->
 
-         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
+         <!-- <mat-expansion-panel hideToggle="true" (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
             <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'">
                <span>2.</span>
                <p> 'Based on the information above, what will be your overall strategy to ensure an effective product
@@ -74,10 +78,10 @@
                   <button mat-button>{{bttn2}}</button>
                </div>
             </div>
-         </mat-expansion-panel>
+         </mat-expansion-panel> -->
 
          <!-- 3rd question down -->
-         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState3 = true" (closed)="panelOpenState3 = false">
+         <!-- <mat-expansion-panel hideToggle="true" (opened)="panelOpenState3 = true" (closed)="panelOpenState3 = false">
             <mat-expansion-panel-header [collapsedHeight]="'80px'" [expandedHeight]="'70px'">
                <span>3.</span>
                <p> 'Outline an implementation plan of the major project steps you envisage. '</p>
@@ -107,12 +111,12 @@
                   <button mat-button>{{bttn3}}</button>
                </div>
             </div>
-         </mat-expansion-panel>
+         </mat-expansion-panel> -->
 
 
          <!-- 4th Question down -->
 
-         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState4 = true" (closed)="panelOpenState4 = false">
+         <!-- <mat-expansion-panel hideToggle="true" (opened)="panelOpenState4 = true" (closed)="panelOpenState4 = false">
             <mat-expansion-panel-header [collapsedHeight]="'130px'" [expandedHeight]="'120px'">
                <span>4.</span>
                <p> 'Please provide an indication of the key tasks, departments and stakeholders that would be involved
@@ -144,11 +148,11 @@
                   <button mat-button>{{bttn4}}</button>
                </div>
             </div>
-         </mat-expansion-panel>
+         </mat-expansion-panel> -->
 
          <!-- 5th question down -->
 
-         <mat-expansion-panel hideToggle="true" (opened)="panelOpenState5 = true" (closed)="panelOpenState5 = false" (click)="onClickedEvent">
+         <!-- <mat-expansion-panel hideToggle="true" (opened)="panelOpenState5 = true" (closed)="panelOpenState5 = false" (click)="onClickedEvent">
             <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'80px'">
                <span>5.</span>
                <p> 'Are there any difficulties/challenges/risks that might arise? If yes, what are they and how you
@@ -179,7 +183,7 @@
                   <button mat-button>{{bttn5}}</button>
                </div>
             </div>
-         </mat-expansion-panel>
+         </mat-expansion-panel> -->
 
 
 
