@@ -7,3 +7,26 @@ button{
     max-width: 200px;
     max-height: 50px;
 }
+
+.load p{
+text-align: center;
+margin-top: 20%;
+align-content: center;
+font-size: 40px;
+}
+
+mat-progress-spinner {
+ margin-left: 615px;
+ color: orange;
+}
+.hideClass{
+    display: block;
+}
+.loadingSpinner{
+    background: #fff url(/assets/whiteImage.png) !important;
+    background-size: 800px 800px;
+    position: fixed; 
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+}

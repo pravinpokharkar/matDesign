@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -22,7 +21,9 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { HttpClientModule } from '@angular/common/http';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
+import {MatDialogModule} from '@angular/material/dialog';
+import { PopUpComponent } from './pop-up/pop-up.component'; 
 
 
 
@@ -36,6 +37,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LeftMenuComponent,
     RightMenuComponent,
     TestComponent,
+    PopUpComponent,
     
   ],
   imports: [
@@ -54,9 +56,16 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ScrollToModule.forRoot(),
     InViewportModule, 
     ScrollSpyModule.forRoot(),
-    HttpClientModule
-    
-  ],
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    RouterModule
+    ],
+
+    entryComponents: [ 
+    PopUpComponent 
+    ],
+
   providers: [TimerService,{
     provide: PERFECT_SCROLLBAR_CONFIG,
     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG

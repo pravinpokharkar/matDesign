@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TimerService } from '../timer.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,14 +11,16 @@ import { Subscription } from 'rxjs';
 export class ToolbarComponent implements OnInit {
 
 
-  cntr: number
-  counter: number=5
-  counter1: number = 2246
+  //cntr: number
+  //counter: number = 5
+  //counter1: number = 2246
   x: number = 0;
-  mainCounter = 2330;
+  mainCounter = 2620;
   subCounter = 60;
 
-  constructor(private timerService: TimerService) { }
+  constructor(private timerService: TimerService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.timer();
@@ -25,7 +28,7 @@ export class ToolbarComponent implements OnInit {
 
   timer() {
     setInterval(() => {
-      if (this.subCounter!==0) {
+      if (this.subCounter !== 0) {
         this.subCounter--;
       }
     }, 1000);
@@ -34,63 +37,18 @@ export class ToolbarComponent implements OnInit {
         this.mainCounter--;
         this.subCounter = 60;
       }
-    },1000 )
-  }
 
+      else if (this.mainCounter == 0)
+        this.router.navigate(['done'])
 
-
-
-
-
-
-
-    // this.timerService.timerObs().subscribe(
-    //   number=> console.log(number),
-    //   err=> console.log(err),
-    //   ()=> console.log('completed')
-
-    // )
-
-    // this.timerService.cnt().subscribe(
-    //   res=>console.log(res)
-
-    // )
-
-
-
-
-    // let counterFunction=()=>{
-    //     this.counter=5;
-    //   setInterval(() => {
-
-    //   if(this.counter!==0)this.counter--;
-
-    //   }, 1000);
-
-    //   setTimeout(() => {
-
-    //     if (this.counter==0)
-    //     this.counter1--;
-    //     this.counter=5;
-
-    //     }, 6000);
-
-    // }
-
- 
-
-    // counterFunction();
-    
-
-
-    //   //  setInterval(() => {
-    //   //   do {this.counter1--}
-    //   //     while(this.x=1); 
-
-    //   //    }, 1000);
-
+    }, 1000)
 
   }
 
- 
+
+
+
+}
+
+
 

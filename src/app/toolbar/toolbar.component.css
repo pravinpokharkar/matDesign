@@ -1,4 +1,9 @@
 
+mat-toolbar{
+   position: fixed;
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 0;
+}
 
 mat-toolbar div div span{
     

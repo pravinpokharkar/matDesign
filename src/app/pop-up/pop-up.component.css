@@ -1,0 +1,57 @@
+
+
+.modal_inner {
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.modal_innercontent{
+display: block;
+margin: 0 -24px;
+padding: 0 24px;
+max-height: 65vh;
+overflow: auto;
+}
+
+.modal_innercontent h1{
+    color: #333;
+    font-size: 18px;
+}
+
+.modal_innercontent div{
+    color: #666;
+font-size: 16px;
+width: 80%;
+margin: 20px auto;
+}
+
+.button1{
+    margin-right: 10px;
+    background: transparent;
+    border: 1px solid #333 !important;
+    color: #333 !important;
+    font-size: 16px;
+text-align: center;
+width: 105px;
+height: 40px;
+letter-spacing: unset;
+
+}
+
+
+.button2{
+    background: #ff8308;
+    border: 1px solid #ff8308 !important;
+    margin-left: 8px;
+    font-size: 16px;
+text-align: center;
+width: 105px;
+height: 40px;
+letter-spacing: unset;
+color: white;
+}
+
+.mat-dialog-actions{
+    padding: 12px 35px;
+    text-align: center;
+}

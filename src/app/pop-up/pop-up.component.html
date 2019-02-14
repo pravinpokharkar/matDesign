@@ -1,0 +1,16 @@
+<div class="modal_outer ">
+    <div class="modal_inner ">
+        <div class="modal_innercontent">
+            <h1 mat-dialog-title>Alert</h1>
+            <mat-dialog-content>
+                <p>Are you sure you want to exit the case study?</p>
+            </mat-dialog-content>
+        </div>
+
+        <mat-dialog-actions class="mat-dialog-actions">
+            <button class="button1" mat-button (click)="onNoClick()">Cancel</button>
+            <button class="button2" mat-button (click)="onNoClick()" [routerLink]="['done']">Yes</button>
+        </mat-dialog-actions>
+
+    </div>
+</div>

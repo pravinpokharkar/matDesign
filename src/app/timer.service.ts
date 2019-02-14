@@ -3,12 +3,16 @@ import {Observable} from 'rxjs';
 import {interval} from 'rxjs';
 
 import {  HttpClient } from '@angular/common/http';
+import { RootObject } from 'src/domainObj1';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TimerService {
 
+loader:boolean=false
+allData: Observable<Object>
+ 
   constructor(
      private http: HttpClient
   ) { 
@@ -22,25 +26,26 @@ export class TimerService {
       'Content-Type':'application/json'
     }
    })
+
+  
  }
 
  getCaseStudy(accToken):Observable<Object>{
-   console.log(accToken)
+ 
    
-   return this.http.get('https://simulationapi.ur-nl.com/case_study/companies/58cba141ba169e0eab2657c9/company_case_studies/595c859eba169ec47e4f20d4/user_company_case_studies/595ce021ba169edb9c733e90?include[company_case_study][include]=questions',{
+  this.allData= this.http.get('https://simulationapi.ur-nl.com/case_study/companies/58cba141ba169e0eab2657c9/company_case_studies/595c859eba169ec47e4f20d4/user_company_case_studies/595ce021ba169edb9c733e90?include[company_case_study][include]=questions',{
+ 
    headers:{
     'Authorization': `${accToken}`,
     'Content-Type':'application/json'
    }
   })
+  return this.allData;
+
+  
  }
 
-//  private handleError(error: any) {
-//   let errMsg = (error.message) ? error.message :
-//       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-//   console.error(errMsg);
-//   return Observable.throw(errMsg);
-// }
+
 
 
 

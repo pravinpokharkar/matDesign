@@ -1,174 +1,40 @@
-<div class="container-fluid pr-0 pl-0">
-    <div class="row">
-        <div class="col-md-12 col-lg-12 col-sm-12">
-            <app-toolbar></app-toolbar>
+<div class="container-fluid loadingSpinner" *ngIf="loading else loaded">
+    <div class="load">
 
-        </div>
+        <p>Authenticating..
+            <mat-progress-spinner [diameter]='size' [value]="val" mode="indeterminate"></mat-progress-spinner>
+        </p>
     </div>
-
-    <div class="row">
-
-        <div [class]='cls'>
-        <app-left-menu></app-left-menu>
-        </div> 
-       
-       
-        <div class="col-lg-4 pl-0 ">
-            <app-right-menu></app-right-menu>
-        </div>
-    </div>
-
-
 </div>
 
 
-<!-- <app-test></app-test> -->
+<div class=" container-fluid loadingSpinner" *ngIf="loading1 else loaded1" #loaded>
+    <div class="load" >
+        <p>Fetching Data..
+            <mat-progress-spinner [diameter]='size' [value]="val" mode="indeterminate"></mat-progress-spinner>
+        </p>
+    </div>
+</div>
 
-<!-- <div class="container-fluid">
-    <div class="row">
+<ng-template class="container-fluid" #loaded1>
+    <div class="row mr-0">
         <div class="col-md-12 col-lg-12 col-sm-12">
-            <div class="row">
+            <app-toolbar></app-toolbar>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 
-            </div>
-
-            
+    <div class="row mr-0">
+        <div [class]='cls'>
+            <app-left-menu></app-left-menu>
         </div>
 
-    </div> -->
 
-<!-- <app-left-menu></app-left-menu>   -->
+        <div class="col-lg-4 col-md-12 col-sm-12 pl-0 pr-0">
+            <app-right-menu [qData]="this.rootCase"></app-right-menu>
+        </div>
+    </div>
 
-<!-- 
-<div id="list-example" class="list-group">
-    <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-    <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-    <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-  </div>
- 
-  <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" [style]="{'overflow': scroll}">
-    <h4 id="list-item-1"> <ol>
-        <li> Page 1 The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol>
-    <ol>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol>
-    <ol>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol></h4>
-    <p>...</p>
-    <h4 id="list-item-2"><ol>
-        <li> Page 2 The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol>
-    <ol>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol>
-    <ol>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol></h4>
-    <p>...</p>
-    <h4 id="list-item-3"><ol>
-        <li> Page 3 The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol>
-    <ol>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol>
-    <ol>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol></h4>
-    <p>...</p>
-    <h4 id="list-item-4">page4<ol>
-        <li> Page 1 The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol>
-    <ol>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol>
-    <ol>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-        <li> The Dark Chocolate</li>
-    
-    </ol></h4>
-    <p>...</p>
-  </div> -->
+
+</ng-template>
+
